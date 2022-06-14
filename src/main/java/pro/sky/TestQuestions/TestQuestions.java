@@ -8,6 +8,8 @@ public class TestQuestions {
     private List<String> answers;
     private int answer;
 
+    public TestQuestions(){}
+
     public TestQuestions( String question, List<String> answers, int answer) {
         this.question = question;
         this.answers = answers;
@@ -36,7 +38,7 @@ public class TestQuestions {
     public String toString() {
         String s = "";
         for (String a : answers) {
-            s+=a+'/';
+            s+=a+"\n";
         }
         return question+"\n"+s;
     }
