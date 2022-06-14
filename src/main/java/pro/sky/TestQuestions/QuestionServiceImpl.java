@@ -22,7 +22,7 @@ public class QuestionServiceImpl implements QuestionService {
     }
 
     public TestQuestions getRandomQuestion() {
-        if (list.size()==0) {throw new RuntimeException();}
+        if (list.size()==0) {throw new WrongNumberExeption();}
         else{
         int i = abs(rand.nextInt(list.size()));
         q = list.get(i);
@@ -32,7 +32,7 @@ public class QuestionServiceImpl implements QuestionService {
 
     public String isRight(int answer) {
         if (q == null) {
-            throw new RuntimeException();
+            throw new WrongNumberExeption();
         }
         if (answer == q.getAnswer()) {
             result++;
